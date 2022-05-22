@@ -1,0 +1,73 @@
+[
+    {
+        "_id":1,
+        "name":"Phenumatic Hand Tool",
+        "img":"https://5.imimg.com/data5/RJ/MK/MY-3798353/hand-tool-250x250.jpg",
+        "description":"Being pioneers of the industry, we are manufacturing and supplying a quality approved array of Commercial Hand Tools.",
+        "minimumOrder":20,
+        "availableQuantity":100,
+        "price":299
+
+    },
+    {
+        "_id":2,
+        "name":"12V Cordless Screwdriver",
+        "img":"https://www.shalltools.com/uploads/202227364/12v-cordless-screwdriver52121694757.jpg",
+        "description":"This 12V rechargeable Cordless Screwdriver is the most powerful tool on the market but rechargeable in the lower price.",
+        "minimumOrder":20,
+        "availableQuantity":200,
+        "price":599
+
+    },
+    {
+        "_id":3,
+        "name":"Lithium Ion Cordless Drill",
+        "img":"https://www.shalltools.com/uploads/202027364/lithium-ion-cordless-drill14128025539.jpg",
+        "description":"Chuck Capacity: 1-10mm Max torque: 24N.M to 40N.M Packing: Color Carton",
+        "minimumOrder":20,
+        "availableQuantity":100,
+        "price":299
+
+    },
+    {
+        "_id":4,
+        "name":"Cordless Impact Drill",
+        "img":"https://5.imimg.com/data5/RJ/MK/MY-3798353/hand-tool-250x250.jpg",
+        "description":"Chuck Capacity: 1-10mm Max torque: 24N.M to 40N.M Packing: Color Box+ Carton",
+        "minimumOrder":20,
+        "availableQuantity":100,
+        "price":299
+
+    },
+    {
+        "_id":5,
+        "name":"Lithium Ion Cordless Screwdriver",
+        "img":"https://www.shalltools.com/uploads/202027364/lithium-ion-cordless-screwdriver23070919840.jpg",
+        "description":"LED power indicator and LED work light-Comes with bits and connector-Lithium Ion Battery-Keyless Chuck",
+        "minimumOrder":20,
+        "availableQuantity":100,
+        "price":299
+
+    },
+    {
+        "_id":6,
+        "name":"Cordless Portable Jig Saw",
+        "img":"https://www.shalltools.com/uploads/202027364/cordless-portable-jig-saw30246994909.jpg",
+        "description":"Brushless motor delivers efficient performance for longer runtime-Bright LED light helps to illuminate dimly.",
+        "minimumOrder":20,
+        "availableQuantity":100,
+        "price":299
+
+    },
+    {
+        "_id":7,
+        "name":"Adjustable Wrench",
+        "img":"https://www.shalltools.com/uploads/202027364/adjustable-wrench46198609741.jpg",
+        "description":"High Carbon Steel Material Not Easy To Rust High Hardness and Non-Slip Handle Strong and Sturdy.",
+        "minimumOrder":20,
+        "availableQuantity":100,
+        "price":299
+
+    }
+
+]
