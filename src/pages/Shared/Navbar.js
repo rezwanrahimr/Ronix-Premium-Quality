@@ -9,8 +9,9 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 
 const navigation = [
-    { name: 'Dashboard', href: '#', current: true },
-    { name: 'Purchase', href: '/purchase', current: true },
+    { name: 'Home', href: '/home', current: true },
+    { name: 'Dashboard', href: '#', current: false },
+    { name: 'purchase', href: '/purchase', current: false },
     { name: 'Team', href: '#', current: false },
     { name: 'Projects', href: '#', current: false },
     { name: 'Calendar', href: '#', current: false },
