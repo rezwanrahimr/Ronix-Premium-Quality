@@ -3,9 +3,14 @@ import React from 'react';
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { signOut } from 'firebase/auth';
+import auth from '../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 
 const navigation = [
     { name: 'Dashboard', href: '#', current: true },
+    { name: 'Purchase', href: '/purchase', current: true },
     { name: 'Team', href: '#', current: false },
     { name: 'Projects', href: '#', current: false },
     { name: 'Calendar', href: '#', current: false },
@@ -16,6 +21,10 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
+    const [user] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+      };
     return (
         <div>
 
@@ -118,14 +127,9 @@ const Navbar = () => {
                                                     )}
                                                 </Menu.Item>
                                                 <Menu.Item>
-                                                    {({ active }) => (
-                                                        <a
-                                                            href="#"
-                                                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                                                        >
-                                                            Sign out
-                                                        </a>
-                                                    )}
+                                                    {
+                                                        user ? <a onClick={logout} to="/login" >Sign Out</a> : <Link to="/login">Login</Link>
+                                                }
                                                 </Menu.Item>
                                             </Menu.Items>
                                         </Transition>

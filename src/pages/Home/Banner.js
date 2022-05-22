@@ -3,6 +3,7 @@ import React from 'react';
 const Banner = () => {
     return (
         <div>
+            
             <div className="hero min-h-screen" style={{backgroundImage: `url(${'https://hupshenghardware.com/wp-content/uploads/2019/03/Power-tools-Malaysia.jpg'})`}}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
@@ -14,6 +15,7 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
+           
         </div>
     );
 };
