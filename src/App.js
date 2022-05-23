@@ -5,6 +5,7 @@ import Login from './pages/Login/Login';
 import SignUp from './pages/Login/SignUp';
 import Purchase from './pages/Purchase/Purchase';
 import Navbar from './pages/Shared/Navbar';
+import ProtractedRoute from './pages/Shared/ProtractedRoute';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
        <Route path='/home' element={<Home></Home>}></Route>
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/signup' element={<SignUp></SignUp>}></Route>
-       <Route path='/purchase' element={<Purchase></Purchase>}></Route>
+       <Route path='/purchase' element={<ProtractedRoute><Purchase></Purchase></ProtractedRoute>}></Route>
      </Routes>
     </div>
   );
