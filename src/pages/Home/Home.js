@@ -1,7 +1,9 @@
 import React from 'react';
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary/BusinessSummary';
+import GlobalCustomer from './GlobalCustomer';
 import Parts from './Parts';
+import WhyChooseUs from './WhyChooseUs/WhyChooseUs';
 
 const Home = () => {
     return (
@@ -9,6 +11,8 @@ const Home = () => {
             <Banner></Banner>
             <Parts></Parts>
             <BusinessSummary></BusinessSummary>
+            <WhyChooseUs></WhyChooseUs>
+            <GlobalCustomer></GlobalCustomer>
            
         </div>
     );
