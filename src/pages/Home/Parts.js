@@ -8,7 +8,7 @@ const Parts = () => {
         .then(res => res.json())
         .then(data => setParts(data))
     },[])
-    console.log(parts);
+    
     return (
         <div className='grid grid-cols-3 gap-4 my-5'>
 

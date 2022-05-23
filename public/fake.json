@@ -6,6 +6,7 @@
         "description":"Being pioneers of the industry, we are manufacturing and supplying a quality approved array of Commercial Hand Tools.",
         "minimumOrder":20,
         "availableQuantity":100,
+        "quantity":50,
         "price":299
 
     },
@@ -16,6 +17,7 @@
         "description":"This 12V rechargeable Cordless Screwdriver is the most powerful tool on the market but rechargeable in the lower price.",
         "minimumOrder":20,
         "availableQuantity":200,
+        "quantity":50,
         "price":599
 
     },
@@ -26,6 +28,7 @@
         "description":"Chuck Capacity: 1-10mm Max torque: 24N.M to 40N.M Packing: Color Carton",
         "minimumOrder":20,
         "availableQuantity":100,
+        "quantity":50,
         "price":299
 
     },
@@ -36,6 +39,7 @@
         "description":"Chuck Capacity: 1-10mm Max torque: 24N.M to 40N.M Packing: Color Box+ Carton",
         "minimumOrder":20,
         "availableQuantity":100,
+        "quantity":50,
         "price":299
 
     },
@@ -46,6 +50,7 @@
         "description":"LED power indicator and LED work light-Comes with bits and connector-Lithium Ion Battery-Keyless Chuck",
         "minimumOrder":20,
         "availableQuantity":100,
+        "quantity":50,
         "price":299
 
     },
@@ -56,6 +61,7 @@
         "description":"Brushless motor delivers efficient performance for longer runtime-Bright LED light helps to illuminate dimly.",
         "minimumOrder":20,
         "availableQuantity":100,
+        "quantity":50,
         "price":299
 
     },
@@ -66,6 +72,7 @@
         "description":"High Carbon Steel Material Not Easy To Rust High Hardness and Non-Slip Handle Strong and Sturdy.",
         "minimumOrder":20,
         "availableQuantity":100,
+        "quantity":50,
         "price":299
 
     }
