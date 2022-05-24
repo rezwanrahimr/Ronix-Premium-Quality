@@ -14,6 +14,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NotFound from './pages/Shared/NotFound';
 import MyPortfolio from './pages/MyPortfolio/MyPortfolio';
+import Blogs from './pages/Blogs/Blogs';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
      <Routes>
        <Route path='/' element={<Home></Home>}></Route>
        <Route path='/home' element={<Home></Home>}></Route>
+       <Route path='/blogs' element={<Blogs></Blogs>}></Route>
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/signup' element={<SignUp></SignUp>}></Route>
        <Route path='/myprotfolio' element={<MyPortfolio></MyPortfolio>}></Route>
