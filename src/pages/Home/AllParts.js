@@ -6,7 +6,7 @@ const AllParts = ({ Tools}) => {
     const {name,img,description,minimumOrder,availableQuantity,price} = Tools;
     return (
         <div>
-            <div className="card w-96 h-screen bg-base-100 shadow-xl ">
+            <div className="card  h-screen bg-base-100 shadow-xl ">
                 <figure className="px-10 pt-10">
                     <img  src={img} alt="Shoes" className="rounded-xl h-40" />
                 </figure>

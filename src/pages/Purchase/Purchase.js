@@ -28,7 +28,7 @@ const Purchase = () => {
         const body = { availableQuantity: Number(availableQuantity) - 1
 
         };
-        fetch("http://localhost:5000/available/"+ id,{
+        fetch("https://enigmatic-ridge-01425.herokuapp.com/available/"+ id,{
             method: "POST",
             headers: {
                 "Content-Type":"application/json"
@@ -52,7 +52,7 @@ const Purchase = () => {
         if(stockQuantity === "")return;
         setLoading({id,isStock: true,isLoading: false});
         const body= {availableQuantity: !availableQuantity ? 0 : availableQuantity, stock: stockQuantity};
-        fetch("http://localhost:5000/increase/" + id, {
+        fetch("https://enigmatic-ridge-01425.herokuapp.com/increase/" + id, {
             method: "POST",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(body),
@@ -69,10 +69,10 @@ const Purchase = () => {
     return (
        <div>
            <h1>This is Purchase page</h1>
-            <div className='grid grid-cols-3 gap-4 my-5'>
+            <div className='grid md:grid-cols-3 grid-cols-1 gap-4 my-5 p-10'>
           {
               parts.map(tools => <>
-               <div className="card w-96 h-screen bg-base-100 shadow-xl ">
+               <div className="card  h-screen bg-base-100 shadow-xl ">
                 <figure className="px-10 pt-10">
                     <img  src={tools.img} alt="Shoes" className="rounded-xl h-40" />
                 </figure>

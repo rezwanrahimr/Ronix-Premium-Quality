@@ -16,7 +16,7 @@ const Review = () => {
             <div className='grid md:grid-cols-3 grid-cols-1 gap-4 p-10'>
                 {
                     reviews.map(review => <>
-                        <div class="card w-96 bg-base-100 shadow-xl">
+                        <div class="card  bg-base-100 shadow-xl">
                             <div class="card-body">
                                 <p>{review.description}</p>
                                 <div class="card-actions justify-start items-center font-bold">
