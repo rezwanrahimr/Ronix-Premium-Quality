@@ -10,6 +10,8 @@ import ProtractedRoute from './pages/Shared/ProtractedRoute';
 import MyOrders from './pages/Dashboard/MyOrders';
 import AddReview from './pages/Dashboard/AddReview';
 import MyProfile from './pages/Dashboard/MyProfile';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
 
        </Route>
      </Routes>
+     <ToastContainer />
     </div>
   );
 }

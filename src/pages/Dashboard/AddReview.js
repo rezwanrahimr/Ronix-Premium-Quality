@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const AddReview = () => {
-    const navigate = useNavigate();
     const [user] = useAuthState(auth);
     const [review,setReview] = useState({
         rating: '',description: ''
@@ -15,7 +14,8 @@ const AddReview = () => {
         const body = {
             ...review,
             status: "publish",
-            email: user.email
+            email: user.email,
+            name: user.displayName
         }
         fetch('https://enigmatic-ridge-01425.herokuapp.com/review',{
             method: "POST",
@@ -27,17 +27,16 @@ const AddReview = () => {
         .then(res => res.json())
         .then(data => {
             if(data.status === 1){
-                navigate('/home')
+                toast.success("Review Added Successfully")
             }
         })
     }
-
     // input value.
     const handleInput = (e) =>{
         
         setReview(prev => ({...prev,[e.target.name]: e.target.value}))
     } 
-    console.log(review)
+
 
     return (
         <div>

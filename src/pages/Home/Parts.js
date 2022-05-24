@@ -10,7 +10,7 @@ const Parts = () => {
     },[])
     
     return (
-        <div className='grid grid-cols-3 gap-4 my-5'>
+        <div className='grid md:grid-cols-3 grid-cols-1 gap-4 my-5 p-10'>
 
             {
                parts.slice(0,6).map(Tools => <AllParts key={Tools._id} Tools={Tools}  ></AllParts>)

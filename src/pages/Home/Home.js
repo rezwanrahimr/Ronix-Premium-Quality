@@ -4,6 +4,7 @@ import Banner from './Banner';
 import BusinessSummary from './BusinessSummary/BusinessSummary';
 import GlobalCustomer from './GlobalCustomer';
 import Parts from './Parts';
+import Review from './Review';
 import WhyChooseUs from './WhyChooseUs/WhyChooseUs';
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
             <BusinessSummary></BusinessSummary>
             <WhyChooseUs></WhyChooseUs>
             <GlobalCustomer></GlobalCustomer>
+            <Review></Review>
             <Footer></Footer>
            
         </div>
