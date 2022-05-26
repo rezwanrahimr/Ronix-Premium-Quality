@@ -3,7 +3,28 @@ import React from 'react';
 const MyProfile = () => {
     return (
         <div>
-            <h1>My profile</h1>
+            <h1 className='font-bold text-2xl'>My profile</h1>
+            <div>
+                {/* image */}
+                <div class="avatar my-5">
+                    <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                        <img src="https://api.lorem.space/image/face?hash=3174" />
+                    </div>
+                   
+                   
+                    
+                </div>
+                <h1>Name: </h1>
+                        <h1>Email: </h1>
+                        <h1>Phone: </h1>
+                        <h1>Address: </h1>
+                        <h1>Education: </h1>
+                        <h1>Social Media</h1>
+                        <h1>LinkdIn: </h1>
+                        <h1>Facebook: </h1>
+                        <button class="btn btn-active mt-10">update</button>
+            </div>
+
         </div>
     );
 };

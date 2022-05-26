@@ -2,8 +2,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const AllParts = ({ Tools}) => {
+    console.log(Tools)
     const navigate = useNavigate();
-    const {name,img,description,minimumOrder,availableQuantity,price} = Tools;
+    const {_id,name,img,description,minimumOrder,availableQuantity,price} = Tools;
     return (
         <div>
             <div className="card  h-screen bg-base-100 shadow-xl ">
@@ -17,7 +18,7 @@ const AllParts = ({ Tools}) => {
                     <p>Price : ${price}</p>
                     <p>{description}</p>
                     <div className="card-actions">
-                        <button className="btn btn-primary" onClick={()=>navigate('/purchase')}>Buy Now</button>
+                        <button className="btn btn-primary" onClick={()=>  navigate('/purchase',_id) }>Buy Now</button>
                     </div>
                 </div>
             </div>
