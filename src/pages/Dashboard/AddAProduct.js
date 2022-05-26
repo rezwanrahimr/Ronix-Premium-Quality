@@ -16,7 +16,7 @@ const AddAProduct = () => {
             headers: {
                 "content-type": "application/json",
             },
-            body: JSON.stringify({...data}),
+            body: JSON.stringify({ ...data }),
         })
             .then((res) => res.json())
             .then((result) => {
@@ -24,54 +24,26 @@ const AddAProduct = () => {
             });
     };
     return (
-        <div className="w-50 mx-auto">
-                <h1 className='my-5 text-2xl font-bold'>ADD NEW TOOLS</h1>
-            <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
-                <input
-                    placeholder="Name"
-                    className="form-control"
-                    {...register("name")}
+        <div className="">
+            <h1 className='my-4 text-2xl font-bold'>ADD NEW TOOLS</h1>
+            <div className='flex h-screen justify-center items-center overflow-hidden'>
+                <div className='flex justify-center card w-96 bg-base-100 shadow-xl'>
+                    <div className="card-body">
+                        <form className="" onSubmit={handleSubmit(onSubmit)}>
+                            <input type="text" placeholder="Name" class="input form-control input-bordered w-full max-w-xs" {...register("name")} />
+                            <input type="text" placeholder="Photo Url" class="input my-2 form-control input-bordered w-full max-w-xs" {...register("img")} />
+                            <input type="text" placeholder="Description" class="input form-control input-bordered w-full max-w-xs" {...register("description")} />
+                            <input type="text" placeholder="Minimum Order" class="input form-control my-2 input-bordered w-full max-w-xs" {...register("minimumOrder")} />
+                            <input type="text" placeholder="Available Quantity" class="input form-control input-bordered w-full max-w-xs" {...register("availableQuantity")} />
+                            <input type="text" placeholder="Quantity" class="input my-2 form-control input-bordered w-full max-w-xs" {...register("quantity")} />
+                            <input type="text" placeholder="price" class="input form-control input-bordered w-full max-w-xs" {...register("price")} />
 
-                />
-                 <input
-                    placeholder="Photo Url"
-                    className="form-control"
-                    type="text"
-                    {...register("img")}
-                />
-                <textarea
-                    className="my-2 form-control"
-                    placeholder="Description"
-                    {...register("description")}
+                            <button type="submit" class="btn mt-2">submit</button>
 
-                />
-                <input
-                    className="my-2 form-control"
-                    placeholder="Minimum Order"
-                    type="number"
-                    {...register("minimumOrder")}
-                />
-                <input
-                    placeholder="Available Quantity"
-                    className="form-control"
-                    type="number"
-                    {...register("availableQuantity")}
-                />
-                <input
-                    placeholder="Quantity"
-                    className="form-control"
-                    type="number"
-                    {...register("quantity")}
-                />
-                <input
-                    className="my-2 form-control"
-                    placeholder="price"
-                    {...register("price")}
-                />
-               
-                
-                <input type="submit" className="btn btn-primary fw-bold mb-5" value="Submit" />
-            </form>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
         </div>
     );
