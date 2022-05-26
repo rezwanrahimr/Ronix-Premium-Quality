@@ -16,6 +16,10 @@ import NotFound from './pages/Shared/NotFound';
 import MyPortfolio from './pages/MyPortfolio/MyPortfolio';
 import Blogs from './pages/Blogs/Blogs';
 import UpdateProfile from './pages/Dashboard/UpdateProfile';
+import ManageAllOrders from './pages/Dashboard/ManageAllOrders';
+import AddAProduct from './pages/Dashboard/AddAProduct';
+import MakeAdmin from './pages/Dashboard/MakeAdmin';
+import ManageProducts from './pages/Dashboard/ManageProducts';
 
 
 function App() {
@@ -35,6 +39,10 @@ function App() {
          <Route index element={<MyOrders></MyOrders>}></Route>
          <Route path='review' element={<AddReview></AddReview>}></Route>
          <Route path='profile' element={<MyProfile></MyProfile>}></Route>
+         <Route path='manageAllOrders' element={<ManageAllOrders></ManageAllOrders>}></Route>
+         <Route path='addAProduct' element={<AddAProduct></AddAProduct>}></Route>
+         <Route path='makeAdmin' element={<MakeAdmin></MakeAdmin>}></Route>
+         <Route path='manageProducts' element={<ManageProducts></ManageProducts>}></Route>
        </Route>
        <Route path='*' element={<NotFound></NotFound>}></Route>
      </Routes>

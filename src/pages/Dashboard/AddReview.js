@@ -5,11 +5,11 @@ import auth from '../../firebase.init';
 
 const AddReview = () => {
     const [user] = useAuthState(auth);
-    const [review,setReview] = useState({
-        rating: '',description: ''
+    const [review, setReview] = useState({
+        rating: '', description: ''
     });
 
-    const addReview = (e) =>{
+    const addReview = (e) => {
         e.preventDefault();
         const body = {
             ...review,
@@ -17,25 +17,25 @@ const AddReview = () => {
             email: user.email,
             name: user.displayName
         }
-        fetch('https://enigmatic-ridge-01425.herokuapp.com/review',{
+        fetch('https://enigmatic-ridge-01425.herokuapp.com/review', {
             method: "POST",
             headers: {
-                'Content-Type':'application/json'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(body)
         })
-        .then(res => res.json())
-        .then(data => {
-            if(data.status === 1){
-                toast.success("Review Added Successfully")
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 1) {
+                    toast.success("Review Added Successfully")
+                }
+            })
     }
     // input value.
-    const handleInput = (e) =>{
-        
-        setReview(prev => ({...prev,[e.target.name]: e.target.value}))
-    } 
+    const handleInput = (e) => {
+
+        setReview(prev => ({ ...prev, [e.target.name]: e.target.value }))
+    }
 
 
     return (
@@ -47,22 +47,22 @@ const AddReview = () => {
                         <form onSubmit={addReview}>
                             <div className="form-control w-full max-w-xs">
                                 <label className="label">
-                                    <span className="label-text">rating</span>
+                                    <span className="label-text">Rating</span>
                                 </label>
-                                <input 
-                                name='review'
-                                type="text" 
-                                onChange={handleInput}
-                                placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                                <input
+                                    name='review'
+                                    type="text"
+                                    onChange={handleInput}
+                                    placeholder="Type here" class="input input-bordered w-full max-w-xs" />
                             </div>
                             <div className="form-control w-full max-w-xs">
                                 <label className="label">
-                                    <span className="label-text">Your opinion</span>
+                                    <span className="label-text">Your Opinion</span>
                                 </label>
-                                <textarea 
-                                name='description'
-                                onChange={handleInput}
-                                class="textarea textarea-bordered" placeholder="type here"></textarea>
+                                <textarea
+                                    name='description'
+                                    onChange={handleInput}
+                                    class="textarea textarea-bordered" placeholder="type here"></textarea>
                                 <label className="label">
                                 </label>
                             </div>
