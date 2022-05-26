@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import NotFound from './pages/Shared/NotFound';
 import MyPortfolio from './pages/MyPortfolio/MyPortfolio';
 import Blogs from './pages/Blogs/Blogs';
+import UpdateProfile from './pages/Dashboard/UpdateProfile';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/signup' element={<SignUp></SignUp>}></Route>
+       <Route path='/updateProfile' element={<UpdateProfile></UpdateProfile>}></Route>
        <Route path='/myprotfolio' element={<MyPortfolio></MyPortfolio>}></Route>
        <Route path='/purchase' element={<ProtractedRoute><Purchase></Purchase></ProtractedRoute>}></Route>
        <Route path='/dashboard' element={<ProtractedRoute><Dashboard></Dashboard></ProtractedRoute>}>
