@@ -9,6 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 import URL from "../../API";
 import auth from "../../firebase.init";
 
+
 const SignUp = () => {
   let signInError;
   const navigate = useNavigate();

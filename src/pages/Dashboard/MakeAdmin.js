@@ -1,6 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
 
 const MakeAdmin = () => {
+
+    const [users, setUser] = useState([]);
+    // const {email} = users[0];
+  
+    
+    const loadData = () =>{
+        fetch('https://enigmatic-ridge-01425.herokuapp.com/user')
+        .then(res => res.json())
+        .then(data => setUser(data))
+    }
+    useEffect(() =>{
+        loadData()
+    },[])
+ 
+   /*  const makAdmin = () => {
+        fetch(`https://enigmatic-ridge-01425.herokuapp.com/user/${email}`,{
+            method: 'PUT',
+            headers:'Content-Type: application/json',
+            body:{
+                email: email,
+            }
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }
+
+ */
+
     return (
 
         <div>
@@ -20,33 +49,40 @@ const MakeAdmin = () => {
                     </thead>
                     <tbody>
                         {/* <!-- row 1 --> */}
-                        <tr>
-                            <th>
-                                <div>1</div>
-                            </th>
-                            <td>
-                                <div class="flex items-center space-x-3">
-                                    <div class="avatar">
-                                        <div class="mask mask-squircle w-12 h-12">
-                                            <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
+                      
+                           
+                               {
+                                   users.map((user,index) => <>
+                                    <tr>
+                                    <th>
+                                        <div>{index+1 }</div>
+                                    </th>
+                                    <td>
+                                        <div class="flex items-center space-x-3">
+                                            <div class="avatar">
+                                                <div class="mask mask-squircle w-12 h-12">
+                                                    <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="font-bold">{user.email}</div>
+                                                <div class="text-sm opacity-50"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <div class="font-bold">email</div>
-                                        <div class="text-sm opacity-50">user name</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                            <button class="btn btn-accent btn-xs">MAKE ADMIN</button>
-                            </td>
-                            <td>
-                            <button class="btn  btn-error btn-xs">REMOVE ADMIN</button>
-                            </td>
-                           
-                           
-                        </tr>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-accent btn-xs" >MAKE ADMIN</button>
+                                    </td>
+                                    <td>
+                                        <button class="btn  btn-error btn-xs">REMOVE ADMIN</button>
+                                    </td>
 
+
+                                </tr>
+                                   </>)
+                               }
+                         
+                       
 
                     </tbody>
                     {/* <!-- foot --> */}

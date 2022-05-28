@@ -22,8 +22,8 @@ const Navbar = () => {
         <li><Link to="/myprotfolio">My Protfolio</Link></li>
         {
             user && <li><div class="dropdown dropdown-hover">
-            <label tabindex="0" class="">User</label>
-            <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+            <label tabIndex="0" class="">User</label>
+            <ul tabIndex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
               <li>{user.displayName}</li>
               <li>{user.email}</li>
             </ul>
