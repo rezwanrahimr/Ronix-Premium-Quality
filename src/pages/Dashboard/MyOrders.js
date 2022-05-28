@@ -11,7 +11,6 @@ const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const navigate = useNavigate();
   const [procStatus, setProcStatus] = useState(false);
-
   useEffect(() => {
     axios
       .get(URL + "/api/get-order?email=" + user.email)
@@ -34,14 +33,13 @@ const MyOrders = () => {
       axios
         .post(
           URL +
-            `/api/update-order-status?id=${id}&status=cancelled&email=${user.email}`
+          `/api/update-order-status?id=${id}&status=cancelled&email=${user.email}`
         )
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     }
     setProcStatus(!procStatus);
   };
-
   const handlePayment = (id, total) => {
     axios
       .post(URL + "/api/re-payment", {
@@ -109,8 +107,8 @@ const MyOrders = () => {
                     {od.status === "cancelled"
                       ? "Cancelled"
                       : od.status === "paid"
-                      ? "Paid"
-                      : "Cancel"}
+                        ? "Paid"
+                        : "Cancel"}
                   </button>
                 </th>
                 <th>

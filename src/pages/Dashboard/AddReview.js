@@ -8,7 +8,6 @@ const AddReview = () => {
     const [review, setReview] = useState({
         rating: '', description: ''
     });
-
     const addReview = (e) => {
         e.preventDefault();
         const body = {
@@ -33,7 +32,6 @@ const AddReview = () => {
     }
     // input value.
     const handleInput = (e) => {
-
         setReview(prev => ({ ...prev, [e.target.name]: e.target.value }))
     }
 
@@ -68,7 +66,6 @@ const AddReview = () => {
                             </div>
                             <input className='btn w-full max-w-xs text-white' type="submit" value="submit" />
                         </form>
-
                     </div>
                 </div>
             </div >

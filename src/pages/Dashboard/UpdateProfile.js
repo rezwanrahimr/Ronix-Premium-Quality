@@ -10,7 +10,6 @@ const UpdateProfile = () => {
     const { register, handleSubmit } = useForm();
     const [loading, setLoading] = useState(false);
     const [user] = useAuthState(auth);
-
     const onSubmit = (data) => {
         setLoading(true);
         axios
@@ -85,7 +84,6 @@ const UpdateProfile = () => {
                                 {loading ? "updaing profile..." : "update profile"}
                             </button>
                         </form>
-
                     </div>
                 </div>
             </div >

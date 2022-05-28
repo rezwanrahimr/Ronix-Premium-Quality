@@ -68,14 +68,12 @@ const AddAProduct = () => {
                 class="input form-control input-bordered w-full max-w-xs"
                 {...register("in_stock")}
               />
-
               <input
                 type="text"
                 placeholder="Price"
                 class="input form-control input-bordered my-2 w-full max-w-xs"
                 {...register("price")}
               />
-
               <button type="submit" class="btn mt-2" disabled={loading}>
                 {loading ? "Adding Product..." : "Add Product"}
               </button>

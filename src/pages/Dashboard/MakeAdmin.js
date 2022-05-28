@@ -2,34 +2,30 @@ import React, { useEffect, useState } from 'react';
 
 
 const MakeAdmin = () => {
-
     const [users, setUser] = useState([]);
     // const {email} = users[0];
-  
-    
-    const loadData = () =>{
+    const loadData = () => {
         fetch('https://enigmatic-ridge-01425.herokuapp.com/user')
-        .then(res => res.json())
-        .then(data => setUser(data))
+            .then(res => res.json())
+            .then(data => setUser(data))
     }
-    useEffect(() =>{
+    useEffect(() => {
         loadData()
-    },[])
+    }, [])
+
+    /*  const makAdmin = () => {
+         fetch(`https://enigmatic-ridge-01425.herokuapp.com/user/${email}`,{
+             method: 'PUT',
+             headers:'Content-Type: application/json',
+             body:{
+                 email: email,
+             }
+         })
+         .then(res => res.json())
+         .then(data => console.log(data))
+     }
  
-   /*  const makAdmin = () => {
-        fetch(`https://enigmatic-ridge-01425.herokuapp.com/user/${email}`,{
-            method: 'PUT',
-            headers:'Content-Type: application/json',
-            body:{
-                email: email,
-            }
-        })
-        .then(res => res.json())
-        .then(data => console.log(data))
-    }
-
- */
-
+  */
     return (
 
         <div>
@@ -48,14 +44,11 @@ const MakeAdmin = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* <!-- row 1 --> */}
-                      
-                           
-                               {
-                                   users.map((user,index) => <>
-                                    <tr>
+                        {
+                            users.map((user, index) => <>
+                                <tr>
                                     <th>
-                                        <div>{index+1 }</div>
+                                        <div>{index + 1}</div>
                                     </th>
                                     <td>
                                         <div class="flex items-center space-x-3">
@@ -76,18 +69,11 @@ const MakeAdmin = () => {
                                     <td>
                                         <button class="btn  btn-error btn-xs">REMOVE ADMIN</button>
                                     </td>
-
-
                                 </tr>
-                                   </>)
-                               }
-                         
-                       
+                            </>)
+                        }
 
                     </tbody>
-                    {/* <!-- foot --> */}
-
-
                 </table>
             </div>
         </div>

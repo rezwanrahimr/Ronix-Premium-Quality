@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 
 const ManageProducts = () => {
   const [products, setProducts] = useState([]);
-
   useEffect(() => {
     axios
       .get(URL + "/api/products")
@@ -35,27 +34,6 @@ const ManageProducts = () => {
       .catch((err) => console.log(err));
   }; console.log(products)
   return (
-    // <div>
-    //   <h1>Manage Products</h1>
-    //   <ul>
-    //     {products.map((item, index) => (
-    //       <li key={index}>
-    //         <div className="flex">
-    //           <div className="w-1/3">
-    //             Name: {item.name}
-    //             <br />
-    //             Price: {item.price}
-    //             <br />
-    //             In Stock: {item.in_stock}
-    //             <br />
-    //             <button onClick={() => handleDelete(item._id)}>Delete</button>
-    //           </div>
-    //         </div>
-    //       </li>
-    //     ))}
-    //   </ul>
-    // </div>
-
     <div className="mt-10">
       <h1 className="my-5 text-2xl font-bold">MY ORDER</h1>
       <div class="overflow-x-auto w-full">
@@ -94,17 +72,15 @@ const ManageProducts = () => {
                 </td>
                 <td>{item.price}</td>
                 <td>{item.in_stock}</td>
-              
+
                 <th>
                   <button
                     class="btn btn-error btn-xs"
                     onClick={() => handleDelete(item._id)}
-                   
                   >
-                   DELETE
+                    DELETE
                   </button>
                 </th>
-                
               </tr>
             ))}
           </tbody>
